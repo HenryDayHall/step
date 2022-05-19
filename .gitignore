@@ -6,3 +6,5 @@
 *.png
 *.pdf
 
+# python junk
+__pycache__
