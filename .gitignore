@@ -1,0 +1,8 @@
+# data formats
+*.txt
+*.root
+
+# output formats
+*.png
+*.pdf
+

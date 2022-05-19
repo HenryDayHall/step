@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# nominal value
+curl -O -J https://www.hepdata.net/download/submission/ins1604271/1/root -O HEPData-ins1604271-v1-root.tar.gz
+tar xvzf HEPData-ins1604271-v1-root.tar.gz
+
+# replicas 
+curl -O -J "https://www.hepdata.net/record/resource/844695?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/844703?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/844711?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/844719?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/844727?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/844734?view=true"
+tar xvzf hepdata_tables_data_antiktr06_eta1_replicas.tar.gz
+tar xvzf hepdata_tables_data_antiktr06_eta2_replicas.tar.gz
+tar xvzf hepdata_tables_data_antiktr06_eta3_replicas.tar.gz
+tar xvzf hepdata_tables_data_antiktr06_eta4_replicas.tar.gz
+tar xvzf hepdata_tables_data_antiktr06_eta5_replicas.tar.gz
+tar xvzf hepdata_tables_data_antiktr06_eta6_replicas.tar.gz
+# need to avoid an "argument list too long" issue
+for name in hep*txt; do
+    chmod -x $name
+done
+
+rm *gz

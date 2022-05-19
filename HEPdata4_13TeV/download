@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+hepdata_number=1634970
+
+# nominal value
+curl -O -J https://www.hepdata.net/download/submission/ins${hepdata_number}/1/root -O HEPData-ins${hepdata_number}-v1-root.tar.gz
+tar xvzf HEPData-ins${hepdata_number}-v1-root.tar.gz
+
+# replicas 
+curl -O -J "https://www.hepdata.net/record/resource/840776?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/840783?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/840790?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/840799?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/840806?view=true"
+curl -O -J "https://www.hepdata.net/record/resource/840813?view=true"
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta1_replicas.tar.gz
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta2_replicas.tar.gz
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta3_replicas.tar.gz
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta4_replicas.tar.gz
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta5_replicas.tar.gz
+tar xvzf hepdata_tables_data_incljets_antiktr04_eta6_replicas.tar.gz
+# need to avoid an "argument list too long" issue
+for name in atlas*txt; do
+    chmod -x $name
+done
+
+rm *gz
