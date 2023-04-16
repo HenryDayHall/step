@@ -50,7 +50,7 @@ You can change the location of the outputs by setting `$OUTPUT_DIR`.
 
 This program is divided into 7 modules;
 
-1. `step.py`; this where the fitting happens. Also calculates the fit function, and it's Hessian ans Jacobean. If you wanted to use this with different data, or in another script, this is likely the module you want to import.
+1. `step.py`; this where the fitting happens. Also calculates the fit function, and it's Hessian and Jacobean. If you wanted to use this with different data, or in another script, this is likely the module you want to import.
 2. `result.py`; data class used to store results from `step.py`.
 3. `binmeans.py`; given a set of bin values, performs a crude fit and finds the location of the mean value in each bin according to that fit. `test_binmeans.py` is just a sanity check for this.
 4. `plot.py`; responsible for plotting outputs.
