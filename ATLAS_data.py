@@ -232,11 +232,12 @@ def _cmnd_args():
 
 
 def get_defaults(**override):
-    arg_dict = dict(data="HEPdata4_13TeV", output="ooooh", allsyst=True, 
+    arg_dict = dict(data="HEPdata", output="ooooh", allsyst=True, 
                     exclude_syst=[], include_syst=[], 
-                    excludeHigh=0, excludeLow=0, 
-                    maxdegree=None, nsigma=1., autostop=False,
-                    minimiser=None, integrate=True, binmeans=False)
+                    excludeHigh=0, excludeLow=0, maxiter=100,
+                    maxdegree=20, nsigma=1., autostop=False,
+                    minimiser="powell", integrate=False, binmeans=True,
+                    curriculum_learning=False)
     for name, value in override.items():
         arg_dict[name] = value
     return arg_dict
@@ -578,16 +579,8 @@ def test_switch_out(data, output, exclude_syst, include_syst,
 if __name__ == "__main__":
     arg_dict = _cmnd_args()
     data, n_syst = run(**arg_dict)
-
     root_file = arg_dict['rootcomparison']
-    if root_file is None:
-        save(data, arg_dict, n_syst, name_prefix='', root_file=root_file)
-    else:
-        save(data, arg_dict, n_syst, name_prefix='root-c', root_file=root_file)
-        import os
-        noc_root_file = root_file.replace("cpp_root/", "cpp_root/noc_")
-        if os.path.exists(noc_root_file):
-            save(data, arg_dict, n_syst, name_prefix='root-noc', root_file=noc_root_file)
+    save(data, arg_dict, n_syst, name_prefix='', root_file=root_file)
     #display(data, n_syst, arg_dict['rootcomparison'])
     #test_minimisers(**arg_dict)
     #test_hybrid(**arg_dict)
