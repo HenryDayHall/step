@@ -1,7 +1,7 @@
 
 # A python library to implement Step
 
-Inspired by the work at `https://arxiv.org/abs/2111.09968`
+Inspired by the work at [https://arxiv.org/abs/2111.09968](https://arxiv.org/abs/2111.09968).
 
 
 ## Setup
