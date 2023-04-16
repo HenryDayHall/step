@@ -8,7 +8,7 @@ Inspired by the work at `https://arxiv.org/abs/2111.09968`
 This library needs python3, `pyroot`, `matplotlib`, `scipy` and `nlopt`.
 To install these using pip;
 ```
-> yes | pip install requirements.txt
+> yes | pip install -r requirements.txt
 ```
 or to install using conda;
 ```

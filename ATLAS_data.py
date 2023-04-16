@@ -381,7 +381,7 @@ def save(data, argdict, n_syst, name_prefix=None, root_file=None):
     name = name_format.format(i)
     print(name)
     # ensure the directory exists
-    os.makedir(os.path.dirname(output), exist_ok=True)
+    os.makedirs(os.path.dirname(output), exist_ok=True)
     # write the data
     with open(name, 'w') as output:
         output.write(str(argdict))
