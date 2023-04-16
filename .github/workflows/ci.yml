@@ -19,7 +19,7 @@ jobs:
             - name: Install dependancies
               run: |
                   conda create --name step
-                  source activate step
+                  conda activate step
                   conda install --yes --file requirements.txt
                   conda install pytest
             - name: Run tests with pytest
