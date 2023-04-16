@@ -8,10 +8,10 @@ import subprocess
 import os
 data_path = os.path.join(root_dir, "HEPdata")
 command = f"cd {data_path} && source download"
-subprocess.run(command, shell=True)
+#subprocess.run(command, shell=True)
 
 # now try to run on it
-from ATLAS_data import run, get_defaults
-arguments = get_defaults()
+from ATLAS_data import get_defaults, run, save
+arguments = get_defaults(data=data_path)
 data, n_syst = run(**arguments)
 save(data, arguments, n_syst, "test")
