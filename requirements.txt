@@ -1,0 +1,10 @@
+# The requirements for this library as small.
+# Of all of them you are least likely to have nlopt.
+# To install using pip;
+# > yes | pip install requirements.txt
+# To install using conda;
+# > conda install --yes --file requirements.txt
+scipy >= 1.0
+nlopt >= 2.0
+root >= 6.0
+matplotlib >= 3.0

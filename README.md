@@ -6,6 +6,16 @@ Inspired by the work at `https://arxiv.org/abs/2111.09968`
 ## Setup
 
 This library needs python3, `pyroot`, `matplotlib`, `scipy` and `nlopt`.
+To install these using pip;
+```
+> yes | pip install requirements.txt
+```
+or to install using conda;
+```
+> conda install --yes --file requirements.txt
+```
+
+
 Depending on what kind of data you would like to work on,
 run one of the `download` scripts.
 
