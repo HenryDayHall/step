@@ -1,3 +1,5 @@
+![python step](https://github.com/HenryDayHall/step/actions/workflows/ci.yml/badge.svg)
+
 # A python library to implement Step
 
 Inspired by the work at `https://arxiv.org/abs/2111.09968`
