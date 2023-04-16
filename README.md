@@ -6,13 +6,17 @@ Inspired by the work at `https://arxiv.org/abs/2111.09968`
 ## Setup
 
 This library needs python3, `pyroot`, `matplotlib`, `scipy` and `nlopt`.
-To install these using pip;
-```
-> yes | pip install -r requirements.txt
-```
-or to install using conda;
+
+To install these using conda;
 ```
 > conda install --yes --file requirements.txt
+```
+It's not possible to install `pyroot` using pip at present, 
+but if you have already installed a recent version of ROOT
+then you likely have `pyroot` on your system already.
+In that case, to install using pip;
+```
+> yes | pip install matplotlib scipy nlopt
 ```
 
 

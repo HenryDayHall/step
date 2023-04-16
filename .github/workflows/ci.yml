@@ -18,9 +18,10 @@ jobs:
                   python-version: 3.8
             - name: Install dependancies
               run: |
-                  python -m pip install --upgrade pip
-                  pip install -r requirements.txt
-                  pip install pytest
+                  conda create --name step
+                  source activate step
+                  conda install --yes --file requirements.txt
+                  conda install pytest
             - name: Run tests with pytest
-              run: pytest
+              run: source activate step && pytest
 
