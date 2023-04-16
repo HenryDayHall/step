@@ -1,4 +1,3 @@
-![python step](https://github.com/HenryDayHall/step/actions/workflows/ci.yml/badge.svg)
 
 # A python library to implement Step
 
