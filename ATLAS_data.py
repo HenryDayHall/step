@@ -28,9 +28,11 @@ def filter_files(dir_name, suffix):
 def open_root_file(dir_name):
     root_files = filter_files(dir_name, ".root")
     if not root_files:
-        raise RuntimeError("Didn't find a root file in " + args.data)
+        raise RuntimeError(f"Didn't find a root file in {dir_name}. " +
+                           f"Directory contains {os.listdir(dir_name)}")
     if len(root_files) > 1:
-        raise RuntimeError("Found more than one root file in " + args.data)
+        raise RuntimeError(f"Found more than one root file in {dir_name}. " +
+                           f"Directory contains {os.listdir(dir_name)}")
     root_file = root_files[0]
     tfile = ROOT.TFile.Open(root_file)
     return tfile
