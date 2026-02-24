@@ -16,7 +16,7 @@ def has_downloads(data_path):
     return has_root and has_txt
 
 if not has_downloads(data_path):
-    command = f"cd {data_path} && source download"
+    command = f"cd {data_path} && ./download"
     subprocess.run(command, shell=True)
     assert has_downloads(data_path)
 
