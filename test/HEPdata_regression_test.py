@@ -7,7 +7,7 @@ sys.path.append(root_dir)
 import subprocess
 import os
 data_path = os.path.join(root_dir, "HEPdata")
-in_dir = list(os.path.listdir(data_path))
+in_dir = list(os.listdir(data_path))
 has_root = next((True for f in in_dir if f.endswith('.root')), False)
 has_txt = len([f for f in in_dir if f.endswith('.txt')]) > 1000
 if not (has_root and has_txt):
