@@ -7,8 +7,12 @@ sys.path.append(root_dir)
 import subprocess
 import os
 data_path = os.path.join(root_dir, "HEPdata")
-command = f"cd {data_path} && source download"
-#subprocess.run(command, shell=True)
+in_dir = list(os.path.listdir(data_path))
+has_root = next((True for f in in_dir if f.endswith('.root')), False)
+has_txt = len([f for f in in_dir if f.endswith('.txt')]) > 1000
+if not (has_root and has_txt):
+    command = f"cd {data_path} && source download"
+    subprocess.run(command, shell=True)
 
 # now try to run on it
 from ATLAS_data import get_defaults, run, save
