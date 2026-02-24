@@ -6,5 +6,5 @@
 # > conda install --yes --file requirements.txt
 scipy >= 1.0
 nlopt >= 2.0
-root >= 6.0
+pyroot >= 0.2
 matplotlib >= 3.0

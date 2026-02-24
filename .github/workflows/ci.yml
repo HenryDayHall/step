@@ -21,7 +21,7 @@ jobs:
               with:
                   python-version: 3.12
             - name: Install dependancies
-              run: python -m pip install --upgrade pip && pip install matplotlib scipy nlopt pytest
+              run: python -m pip install --upgrade pip && pip install -r requirements.txt
             - name: Run tests with pytest
               run: pytest --disable-warnings
 
