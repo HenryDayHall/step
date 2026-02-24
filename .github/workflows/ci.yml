@@ -1,5 +1,6 @@
 name: Run python tests
 on:
+    workflow_dispatch
     push:
         branches:
             - master
@@ -16,5 +17,5 @@ jobs:
             - name: Install dependancies
               run: apt install -y python3-pip && pip install matplotlib scipy nlopt pytest
             - name: Run tests with pytest
-              run: pytest
+              run: pytest --disable-warnings
 
