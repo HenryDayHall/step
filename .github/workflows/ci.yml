@@ -16,12 +16,13 @@ jobs:
         container: rootproject/root
         steps:
             - uses: actions/checkout@v5
-            - name: Install python3
-              uses: actions/setup-python@v4
-              with:
-                  python-version: 3.12
+              #- name: Install python3
+              #uses: actions/setup-python@v4
+              #with:
+              #    python-version: 3.12
             - name: Install dependancies
-              run: python -m pip install --upgrade pip && pip install -r requirements.txt && pip install pytest
+              #run: python -m pip install --upgrade pip && pip install -r requirements.txt && pip install pytest
+              run: pip install -r requirements.txt && pip install pytest
             - name: Run tests with pytest
               run: pytest --disable-warnings
 
