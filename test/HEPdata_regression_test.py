@@ -6,6 +6,7 @@ sys.path.append(root_dir)
 # download the data
 import subprocess
 import os
+import ROOT
 data_path = os.path.join(root_dir, "HEPdata")
 
 def has_downloads(data_path):

@@ -13,7 +13,6 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        container: rootproject/root
         steps:
             - uses: actions/checkout@v5
             - name: Install python3
