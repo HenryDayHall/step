@@ -25,7 +25,7 @@ jobs:
             - name: Install ROOT and dependencies
               shell: bash -l {0}
               run: |
-                conda install root
+                conda install root pytest coverage
                 conda install --yes --file requirements.txt
             - name: Run tests with pytest
               run: pytest --disable-warnings
