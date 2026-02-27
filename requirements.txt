@@ -6,5 +6,5 @@
 # > conda install --yes --file requirements.txt
 scipy >= 1.0
 nlopt >= 2.0
-rootpy
 matplotlib >= 3.0
+# root < if conda, you can do conda install root, pip needs more work
