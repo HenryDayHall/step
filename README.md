@@ -1,4 +1,6 @@
  [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+ [![Run python tests](https://github.com/HenryDayHall/step/actions/workflows/ci.yml/badge.svg)](https://github.com/HenryDayHall/step/actions/workflows/ci.yml)
+ ![Code Coverage](https://img.shields.io/badge/Code%20Coverage-83%25-success?style=flat)
 
 # A python library to implement Step
 
