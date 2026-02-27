@@ -28,5 +28,5 @@ jobs:
                 conda install root pytest coverage
                 conda install --yes --file requirements.txt
             - name: Run tests with pytest
-              run: pytest --disable-warnings
+              run: python3 -m pytest --disable-warnings
 
