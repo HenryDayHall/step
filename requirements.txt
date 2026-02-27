@@ -7,4 +7,4 @@
 scipy >= 1.0
 nlopt >= 2.0
 matplotlib >= 3.0
-# root==6.32.02 < if conda, you can do conda install root, pip needs more work
+root==6.32.02 # if conda, you can do conda install root, pip needs more work
