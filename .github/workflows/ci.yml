@@ -29,5 +29,5 @@ jobs:
                 conda install --yes --file requirements.txt
             - name: Run tests with pytest
               shell: bash -l {0}
-              run: python3 -m pytest --disable-warnings test/HEPdata_regression_test.py
+              run: python3 -m pytest --disable-warnings
 
